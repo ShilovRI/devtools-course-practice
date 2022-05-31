@@ -472,8 +472,9 @@ BigInt BigInt::operator / (BigInt bi) {
 
     for (int i = k; i < size; i++)
         tmp.mem[i] = bi.mem[i - k];
-    uint_fast64_t l, r, c, p;
+    uint_fast64_t c, p;
     while (1) {
+      uint_fast64_t l, r;
         l = 0;
         r = NSB - 1;
         while (l <= r) {
